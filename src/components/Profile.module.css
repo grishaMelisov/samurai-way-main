@@ -1,0 +1,4 @@
+.content {
+  grid-area: c;
+  background: linear-gradient(to top, #74ebd5, #acb6e5);
+}

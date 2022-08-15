@@ -9,18 +9,3 @@
   grid-template-columns: 2fr 10fr;
   /* grid-gap: ; */
 }
-
-.header {
-  grid-area: h;
-  background: linear-gradient(to right, #ee9ca7, #ffdde1);
-}
-
-.nav {
-  grid-area: n;
-  background: linear-gradient(to top, #c6ffdd, #fbd786, #ee9ca7);
-}
-
-.content {
-  grid-area: c;
-  background: linear-gradient(to top, #74ebd5, #acb6e5);
-}

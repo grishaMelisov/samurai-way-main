@@ -1,0 +1,13 @@
+.nav {
+  grid-area: n;
+  background: linear-gradient(to top, #c6ffdd, #fbd786, #ee9ca7);
+}
+
+.item {
+  color: white;
+}
+
+.item a {
+  color: inherit;
+  text-decoration: none;
+}

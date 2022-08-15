@@ -1,11 +1,11 @@
-const Header = () => {
-  console.log('header rendering')
+import React from 'react'
+import s from './Header.module.css'
+
+function Header() {
   return (
-    <div>
-      <a href='#'>Home</a>
-      <a href='#'>Feed</a>
-      <a href='#'>Messages</a>
-    </div>
+    <header className={s.header}>
+      <img src='https://picsum.photos/id/1011/70/70' />
+    </header>
   )
 }
 

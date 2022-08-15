@@ -1,41 +1,41 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
-import Technologies from './components/Technologies'
-import Header from './components/Header'
-import Raiting from './components/Raiting'
-import Accordion from './components/Accordion'
-import starlogo from './star.png'
-import { Starlogo } from './components/Starlogo'
 
 function App() {
   console.log('App rendering')
   return (
-    <div>
-      <PageTitle title={'INDEX'} />
-      <PageTitle title={'My friends'} />
-      <Header />
-      <Technologies />
-      <Raiting value={4} />
-      <Accordion title={'Friends list'} collapsed={false} />
-      <Accordion title={'Enemies list'} collapsed={false} />
-      <Starlogo />
-      <Starlogo />
-      <Starlogo />
-      <Starlogo />
-      <Starlogo />
-      <Raiting value={1} />
+    <div className='app-wrapper'>
+      <header className='header'>
+        <img src='https://picsum.photos/id/1011/70/70' />
+      </header>
+      <nav className='nav'>
+        <div>
+          <a href='#'>Profile</a>
+        </div>
+        <div>
+          <a href='#'>Messages</a>
+        </div>
+        <div>
+          <a href='#'>News</a>
+        </div>
+        <div>
+          <a href='#'>Music</a>
+        </div>
+      </nav>
+      <div className='content'>
+        <div>
+          <img src='https://picsum.photos/id/1047/1200/100' />
+        </div>
+        <div>avatar + description</div>
+        <div>
+          My posts
+          <div>new post</div>
+          <div>post 1</div>
+          <div>post 2</div>
+        </div>
+      </div>
     </div>
   )
-}
-
-type PageTitlePropsType = {
-  title: string
-}
-
-function PageTitle(props: PageTitlePropsType) {
-  console.log('title rendering')
-  return <h1>{props.title}</h1>
 }
 
 export default App

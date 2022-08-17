@@ -10,7 +10,7 @@ function Navbar() {
       <div className={s.item}>
         <a href='#'>Messages</a>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <a href='#'>News</a>
       </div>
       <div className={s.item}>

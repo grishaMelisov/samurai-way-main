@@ -14,6 +14,8 @@ function Profile() {
       <div className={s.posts}>
         <div className={s.item}>post 1</div>
         <div>post 2</div>
+        <div>post 3</div>
+        <div>post 4</div>
       </div>
     </div>
   )

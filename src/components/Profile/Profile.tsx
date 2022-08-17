@@ -1,4 +1,5 @@
 import React from 'react'
+import MyPosts from './MyPosts/MyPosts'
 import s from './Profile.module.css'
 
 function Profile() {
@@ -8,15 +9,7 @@ function Profile() {
         <img src='https://picsum.photos/id/1047/1200/300' />
       </div>
       <div>avatar + description</div>
-      <div>My posts</div>
-
-      <div>new post</div>
-      <div className={s.posts}>
-        <div className={s.item}>post 1</div>
-        <div>post 2</div>
-        <div>post 3</div>
-        <div>post 4</div>
-      </div>
+      <MyPosts />
     </div>
   )
 }

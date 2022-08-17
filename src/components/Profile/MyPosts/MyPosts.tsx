@@ -12,10 +12,10 @@ function MyPosts() {
       </div>
       <div>new post</div>
       <div className={s.posts}>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post message='Hello World' likeCount={2} />
+        <Post message='IT-Kamasutra' likeCount={100} />
+        <Post message='Do not stop coding' likeCount={0} />
+        <Post message='Follow your heart' likeCount={10} />
       </div>
     </div>
   )

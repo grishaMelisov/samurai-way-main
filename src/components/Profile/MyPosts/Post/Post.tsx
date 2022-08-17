@@ -1,12 +1,21 @@
 import React from 'react'
 import s from './Post.module.css'
 
-function Post() {
+type PostPropsType = {
+  message: string
+  likeCount: number
+}
+
+function Post(props: PostPropsType) {
   return (
     <div className={s.item}>
       <img src='https://blogdota.ru/wp-content/uploads/bloodseeker-430-x-412.jpg' />
-      post 1<button>Like</button>
-      <button>Dislike</button>
+      {props.message}
+      <div>
+        <button>Like</button>
+        {props.likeCount}
+        <button>Dislike</button>
+      </div>
     </div>
   )
 }

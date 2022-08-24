@@ -4,7 +4,7 @@ import s from './Profile.module.css'
 
 function Profile() {
   return (
-    <div className={s.content}>
+    <div>
       <div>
         <img src='https://picsum.photos/id/1047/1200/300' />
       </div>

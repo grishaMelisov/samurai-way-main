@@ -1,25 +1,26 @@
 .nav {
   grid-area: n;
   background: linear-gradient(to top, #c6ffdd, #fbd786, #ee9ca7);
-  padding: 5px;
+  padding: 20px;
 }
 
-.item {
+.item a {
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .item:hover {
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.active {
+.item a.active {
   color: rgb(232, 210, 83);
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(0, 0, 255);
 }
 
-.item a {
+/* .item a {
   color: inherit;
   text-decoration: none;
-}
+} */

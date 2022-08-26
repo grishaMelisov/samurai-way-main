@@ -1,14 +1,12 @@
 import React from 'react'
 import MyPosts from './MyPosts/MyPosts'
 import s from './Profile.module.css'
+import { ProfileInfo } from './ProfileInfo/ProfileInfo'
 
 function Profile() {
   return (
     <div>
-      <div>
-        <img src='https://picsum.photos/id/1047/1200/300' />
-      </div>
-      <div>avatar + description</div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   )

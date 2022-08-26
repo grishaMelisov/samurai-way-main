@@ -3,13 +3,13 @@ import s from './Dialogs.module.css'
 
 type DialogPropsType = {
   name: string
-  url: string
+  id: string
 }
 
 export function Dialog(props: DialogPropsType) {
   return (
     <div className={s.dialog}>
-      <NavLink to={props.url} activeClassName={s.active}>
+      <NavLink to={'/dialogs/' + props.id} activeClassName={s.active}>
         {props.name}
       </NavLink>
     </div>

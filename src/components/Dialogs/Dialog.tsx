@@ -3,7 +3,7 @@ import s from './Dialogs.module.css'
 
 type DialogPropsType = {
   name: string
-  id: string
+  id: number
 }
 
 export function Dialog(props: DialogPropsType) {

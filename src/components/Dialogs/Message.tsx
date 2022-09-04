@@ -1,6 +1,7 @@
 import s from './Dialogs.module.css'
 type MessagePropsType = {
   text: string
+  id: number
 }
 
 export function Message(props: MessagePropsType) {

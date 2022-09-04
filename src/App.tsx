@@ -9,7 +9,7 @@ import { News } from './components/News/News'
 import Profile from './components/Profile/Profile'
 import { Settings } from './components/Settings/Settings'
 
-function App() {
+function App(props: any) {
   console.log('App rendering')
   return (
     <BrowserRouter>

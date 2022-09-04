@@ -1,7 +1,6 @@
-import { NavLink } from 'react-router-dom'
-import { Dialog } from './Dialog'
+import { DialogItem } from './DialogItem/DialogItem'
 import s from './Dialogs.module.css'
-import { Message } from './Message'
+import { Message } from './Message/Message'
 
 type DialogsPropsType = {
   name: string
@@ -25,7 +24,7 @@ export function Dialogs() {
     { id: 5, text: 'dunno what to say' },
   ]
 
-  let dialogsElements = dialogs.map((el) => <Dialog name={el.name} id={el.id} />)
+  let dialogsElements = dialogs.map((el) => <DialogItem name={el.name} id={el.id} />)
 
   let messagesElement = messages.map((el) => <Message text={el.text} id={el.id} />)
 

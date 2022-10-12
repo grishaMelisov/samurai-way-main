@@ -1,19 +1,20 @@
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
 
-type PostsType = {
-  postsData: Array<PostPropsType>
+export type PostsType = {
+  postsData: Array<PostArrType>
 }
 
-type PostPropsType = {
+export type PostArrType = {
   text: string
   likes: number
   id: number
 }
 
 function MyPosts(props: PostsType) {
-  let postsElements = props.postsData.map((el: PostPropsType) => (
-    <Post message={el.text} likeCount={el.likes} id={el.id} />
+  console.log(props)
+  let postsElements = props.postsData.map((el: PostArrType) => (
+    <Post key={el.id} message={el.text} likeCount={el.likes} id={el.id} />
   ))
   return (
     <div className={s.postsBlock}>

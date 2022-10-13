@@ -5,5 +5,7 @@ type MessagePropsType = {
 }
 
 export function Message(props: MessagePropsType) {
-  return <div className={s.message}>{props.text}</div>
+  let style = props.id % 2 === 0 ? s.messageEven : s.message
+
+  return <div className={style}>{props.text}</div>
 }

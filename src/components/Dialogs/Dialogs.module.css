@@ -1,6 +1,5 @@
 .dialogs {
   display: grid;
-
   grid-template-columns: 2fr 10fr;
 }
 
@@ -21,8 +20,14 @@
 
 .messages {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
   color: #c8317f;
+}
+
+.messageEven {
+  align-self: flex-end;
 }

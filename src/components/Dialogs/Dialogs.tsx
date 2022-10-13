@@ -23,14 +23,8 @@ export function Dialogs(props: any) {
 
   return (
     <div className={s.dialogs}>
-      <div className={s.dialogItems}>
-        Dialogs:
-        {dialogsElements}
-      </div>
-      <div className={s.messages}>
-        Messages:
-        {messagesElement}
-      </div>
+      <div className={s.dialogItems}>{dialogsElements}</div>
+      <div className={s.messages}>{messagesElement}</div>
     </div>
   )
 }

@@ -14,11 +14,15 @@ function App(props: any) {
     <div className='app-wrapper'>
       <Header />
       <Navbar state={props.state.sidebarPage} />
-      {/* <Friends state={props.state.sidebarPage.friends} /> */}
       <div className='app-wrapper-content'>
         <Route
           path='/profile'
-          render={() => <Profile postsData={props.state.profilePage.posts} />}
+          render={() => (
+            <Profile
+              postsData={props.state.profilePage.posts}
+              addPost={props.addPost}
+            />
+          )}
         />
         <Route
           path='/dialogs'

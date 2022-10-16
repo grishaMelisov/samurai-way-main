@@ -1,3 +1,9 @@
 .descriptionBlock {
   padding: 10px;
 }
+
+.infoPic {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}

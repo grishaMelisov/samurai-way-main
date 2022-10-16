@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react'
 import { DialogItem } from './DialogItem/DialogItem'
 import s from './Dialogs.module.css'
 import { Message } from './Message/Message'
@@ -21,10 +22,24 @@ export function Dialogs(props: any) {
     <Message key={el.id} text={el.text} id={el.id} />
   ))
 
+  const textChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    console.log(e.currentTarget.value)
+  }
+
+  const buttonHandler = () => {}
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialogItems}>{dialogsElements}</div>
       <div className={s.messages}>{messagesElement}</div>
+      <div className={s.inputArea}>
+        <div>
+          <textarea onChange={textChangeHandler}></textarea>
+        </div>
+        <div>
+          <button onClick={buttonHandler}>add message</button>
+        </div>
+      </div>
     </div>
   )
 }

@@ -83,4 +83,14 @@ let state: RootStateType = {
   },
 }
 
+export let addPost = (postMessage: string) => {
+  let newPost: PostsType = {
+    id: 5,
+    text: postMessage,
+    likes: 0,
+  }
+  state.profilePage.posts.push(newPost)
+  console.log(state.profilePage.posts)
+}
+
 export default state

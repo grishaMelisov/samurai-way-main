@@ -1,12 +1,14 @@
 import React from 'react';
 import { ChangeEvent, useRef } from 'react';
 import { validate } from 'uuid';
+import { ProfilePageType } from '../../../redux/state';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 export type PostsType = {
-    postsData: Array<PostArrType>;
+    profilePage: ProfilePageType;
     addPost: (e: string) => void;
+    updateNewPostText: (text: string) => void;
 };
 export type PostArrType = {
     text: string;
@@ -15,12 +17,15 @@ export type PostArrType = {
 };
 
 function MyPosts(props: PostsType) {
-    let postsElements = props.postsData.map((el: PostArrType) => <Post key={el.id} message={el.text} likeCount={el.likes} id={el.id} />);
+    let postsElements = props.profilePage.posts.map((el: PostArrType) => <Post key={el.id} message={el.text} likeCount={el.likes} id={el.id} />);
     let textareaElem = useRef<HTMLTextAreaElement>(null);
     const addPost = () => {
         let text = textareaElem.current!.value;
         props.addPost(text);
-        textareaElem.current!.value = '';
+    };
+    const onChangePost = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        let text = e.currentTarget.value;
+        props.updateNewPostText(text);
     };
 
     return (
@@ -28,13 +33,7 @@ function MyPosts(props: PostsType) {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea
-                        ref={textareaElem}
-                        // value={textareaValue}
-                        // onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
-                        //     textareaValue = e.currentTarget.value;
-                        // }}
-                    ></textarea>
+                    <textarea ref={textareaElem} value={props.profilePage.newPostText} onChange={onChangePost} />
                 </div>
                 <div>
                     <button onClick={addPost}>Add post</button>

@@ -18,8 +18,9 @@ type FriendsType = {
     name: string;
     avatar: string;
 };
-type ProfilePageType = {
+export type ProfilePageType = {
     posts: Array<PostsType>;
+    newPostText: string;
 };
 type DialogsPageType = {
     messages: Array<MessagesType>;
@@ -42,6 +43,7 @@ let state: RootStateType = {
             { id: 3, text: 'Do not stop coding', likes: 0 },
             { id: 4, text: 'Follow your heart', likes: 10 },
         ],
+        newPostText: 'amoCRM',
     },
 
     dialogsPage: {
@@ -89,6 +91,12 @@ export let addPost = (postMessage: string) => {
         likes: 0,
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+};
+
+export let updateNewPostText = (text: string) => {
+    state.profilePage.newPostText = text;
     rerenderEntireTree(state);
 };
 

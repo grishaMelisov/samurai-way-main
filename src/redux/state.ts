@@ -1,4 +1,10 @@
-import { rerenderEntireTree } from './../render';
+let rerenderEntireTree = (state: any) => {
+    console.log('hey');
+};
+
+type SubscribeType = {
+    rerenderEntireTree: () => void;
+};
 
 type PostsType = {
     id: number;
@@ -84,7 +90,7 @@ let state: RootStateType = {
     },
 };
 
-export let addPost = (postMessage: string) => {
+export const addPost = (postMessage: string) => {
     let newPost: PostsType = {
         id: state.profilePage.posts.length + 2,
         text: postMessage,
@@ -95,9 +101,13 @@ export let addPost = (postMessage: string) => {
     rerenderEntireTree(state);
 };
 
-export let updateNewPostText = (text: string) => {
+export const updateNewPostText = (text: string) => {
     state.profilePage.newPostText = text;
     rerenderEntireTree(state);
+};
+
+export const subscribe = (observer: any) => {
+    rerenderEntireTree = observer;
 };
 
 export default state;
